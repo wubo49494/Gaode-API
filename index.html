@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+  <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
+  <link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css" />
+  <title>地图显示</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <div id="container"></div>
+  <div id="myPageTop">
+    <table>
+      <tr>
+        <td>
+          <label>请输入地点查询： </label>
+        </td>
+        <td>
+          <button id="btn1" class="btn btn1">清除</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input id="tipinput" />
+        </td>
+        <td>
+          <button id="btn2" class="btn btn2">搜索</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="mainFunction">
+    <ul>
+      <li>
+        <div>
+          <h2>梅州市便民出行系统</h2>
+        </div>
+      </li>
+      <li>梅州市天气查询<button id="btn4">当前天气</button></li>
+      <li>梅州市距离查询<button id="btn3">距离测量</button></li>
+      <li>卫星影像图切换<button id="btn5">图层控件</button></li>
+      <li>输入提示与搜索<button id="btn6">地点搜索</button></li>
+      <li>梅州市公交线路<button id="btn7">公交查询</button></li>
+      <li>驾车导航功能--请右键设置起终点</li>
+    </ul>
+  </div>
+  <div id="panel"></div>
+  <div id="panel2"></div>
+  <div id="tip">
+    <p>底图切换与路况路网显示➡</p>
+  </div>
+  <div id="weatherShow" class="info">
+    <h4>预报天气</h4>
+    <hr>
+    <p id='forecast'></p>
+  </div>
+  <div id="input-card" class="input-card" style='width:18rem;'>
+    <label style='color:grey'>公交线路查询</label>
+    <div class="input-item">
+      <div class="input-item-prepend"><span class="input-item-text">线路名称</span></div>
+      <input id='BusLineName' type="text" value='梅州公交5路'>
+    </div>
+    <input id="search" type="button" class="btn" value="查询" />
+  </div>
+  <!-- 加载地图JSAPI脚本 -->
+  <script
+    src="https://webapi.amap.com/maps?v=1.4.14&key=b44b549b52099719443158a18c641306&plugin=AMap.Autocomplete,AMap.PlaceSearch,AMap.MouseTool,AMap.Driving,AMap.ControlBar,AMap.MapType,AMap.OverView,AMap.Scale,AMap.RangingTool,AMap.Weather,AMap.LineSearch">
+  </script>
+  <script src="https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js"></script>
+  <script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
+  <script type="text/javascript" src="./main.js"></script>
+  <script type="text/javascript" src="https://webapi.amap.com/demos/js/liteToolbar.js"></script>
+</body>
+
+</html>
